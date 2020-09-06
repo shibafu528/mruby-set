@@ -540,6 +540,8 @@ assert("Set#==") do
   assert_equal(set1, set1)
   assert_equal(set1, set2)
   assert_not_equal(Set[1], [1])
+  assert_not_equal(Set[1,2], Set[1,2,3])
+  assert_not_equal(Set[1,2,3], Set[4,5,6])
 
   set1 = Class.new(Set)["a", "b"]
   set2 = Set["a", "b", set1]
