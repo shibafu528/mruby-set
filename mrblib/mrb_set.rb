@@ -266,7 +266,7 @@ class Set
     elsif other.instance_of?(self.class) && self.size == other.size
       other_hash = other.instance_variable_get(:@hash)
       other_hash.keys.all? { |o| @hash.keys.include?(o) }
-      other_hash.values.all? { |o| @hash.values.include?(o) }
+#      other_hash.values.all? { |o| @hash.values.include?(o) }
 #      @hash == other.instance_variable_get(:@hash)
     elsif other.is_a?(self.class) && self.size == other.size
       other.all? { |o| include?(o) }
